@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pl.kk</groupId>
+    <artifactId>App</artifactId>
+    <version>0.1</version>
+    <name>hiber</name>
+    <description>project description</description>
+
+    <properties>
+        <!-- https://maven.apache.org/general.html#encoding-warning -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- https://maven.apache.org/general.html#special-characters-site -->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.java.version>11</project.java.version>
+        <maven.compiler.source>${project.java.version}</maven.compiler.source>
+        <maven.compiler.target>${project.java.version}</maven.compiler.target>
+        <!-- see source for the plugins to verify if those can be skipped, they should IIRC -->
+        <maven.compiler.encoding>${project.build.sourceEncoding}</maven.compiler.encoding>
+        <maven.resources.encoding>${project.build.sourceEncoding}</maven.resources.encoding>
+        <version.maven>3.5.3</version.maven>
+        <!-- dependencies versions -->
+        <version.dependency.testng>6.14.3</version.dependency.testng>
+        <version.dependency.testng-data-supplier>1.7.0</version.dependency.testng-data-supplier>
+        <!-- plugin versions should go here, so below they can be omitted -->
+        <version.plugin.maven.jacoco>0.8.2</version.plugin.maven.jacoco>
+        <version.plugin.maven.checkstyle>3.0.0</version.plugin.maven.checkstyle>
+        <version.plugin.maven.enforcer>3.0.0-M2</version.plugin.maven.enforcer>
+        <version.plugin.maven.jar>3.1.0</version.plugin.maven.jar>
+        <version.plugin.maven.compiler>3.8.0</version.plugin.maven.compiler>
+        <version.plugin.maven.resources>3.1.0</version.plugin.maven.resources>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-agroal</artifactId>
+            <version>5.4.1.Final</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.5</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${version.plugin.maven.jar}</version>
+                <configuration>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>App</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <mode>development</mode>
+                            <url>${project.url}</url>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.plugin.maven.compiler}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${version.plugin.maven.resources}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
