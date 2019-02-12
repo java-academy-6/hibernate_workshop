@@ -27,7 +27,7 @@ Kierunkowość determinuje możliwość nawigacji między powiązanymi instancja
 Asocjacja dwukierunkowa jest definiowana jako para asocjacji jednokierunkowych, ze wskazaniem dla jednej z nich, że
 definiuje ona drugi kierunek nawigacji dla dwukierunkowej asocjacji.
 
-c) KASKADA OEPRACJI
+c) KASKADA OPERACJI
 
 Dla asocjacji istnieje możliwość zlecenia kaskadowej propagacji operacji na obiekty zależne.
 **Domyślnie kaskadowa propagacja nie zachodzi.** Kaskada jest często definiowana dla związków 1:N mających charakter związku kompozycji.
@@ -44,21 +44,19 @@ Dostępne wartości atrybutu „cascade” opisującego asocjację to:
 
 1) za pomocą XML
 
-`<set name="nazwa" cascade="save-update, delete" 
-        table="nazwa_tabeli" ...>
-      <key>
-            <column name="column_name" not-null="true" />
-      </key>
-      <one-to-many class="path.to.our.Class" />
+`<set name="nazwa" cascade="save-update, delete" table="nazwa_tabeli" ...>
+    <key>
+        <column name="column_name" not-null="true" />
+    </key>
+    <one-to-many class="path.to.our.Class" />
 </set>`
 
 2) za pomocą adnotacji
 
-
-    @OneToMany(mappedBy = "name")
-    @Cascade({CascadeType.SAVE_UPDATE, CascadeType.DELETE})
+`@OneToMany(mappedBy = "name")
+@Cascade({CascadeType.SAVE_UPDATE, CascadeType.DELETE})
     public Set<SomeClass> getSomeClassRecords() {
         return this.SomeClassRecords;
-    }
-    
+        }`
+        
 CDN
