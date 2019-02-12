@@ -59,4 +59,9 @@ Dostępne wartości atrybutu „cascade” opisującego asocjację to:
         return this.SomeClassRecords;
         }`
         
-CDN
+##### KASKADY - krótkie podsumowanie
+
+Kaskady dają nam bardzo wygodną funkcjonalnośc do automatycznego zarządzania stanem obiektów zależnych.
+Jednak ta funkcjonalność ma swoją cenę. Jeśli nie użyjesz jej mądrze to (np. stosując propagację utrwalania) wygenerujesz
+wiele niepotrzebnych efektów kaskadowych spowalniając tym samym efektywność aplikacji albo 
+(np. stosując propagację usuwania) usuniesz niektóre dane kiedy tego po prostu niezamierzałeś.
