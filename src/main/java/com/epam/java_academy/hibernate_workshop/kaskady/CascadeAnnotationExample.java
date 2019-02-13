@@ -102,15 +102,14 @@ public class CascadeAnnotationExample {
         session.getTransaction().commit();
         System.out.println("Pierwsza transakcja zakończona!");
 
-        System.out.println("Spójrz teraz na baze danych, potem wpisz cokolwiek i naciśnij 'Enterd'" +
+        System.out.println("Spójrz teraz na baze danych, potem wpisz cokolwiek i naciśnij 'Enter'" +
                 " a program usunie z bazy pierwszego autora i jego książki");
         Scanner input = new Scanner(System.in);
         input.nextLine();
 
-
         //Begin the transaction
         session.beginTransaction();
-        System.out.println("Rozpoczęto transakcję!");
+        System.out.println("Rozpoczęto drugą transakcję!");
 
         /**
          *  method of the session object will delete the author object into the database.
