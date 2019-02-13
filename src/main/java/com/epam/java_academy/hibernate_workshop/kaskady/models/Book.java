@@ -8,12 +8,19 @@ import java.io.Serializable;
 public class Book implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "BOOK_ID", unique = true, nullable = false)
     private Long id;
 
     @Column(name = "TITLE", nullable = false, length = 100)
     private String title;
+
+    @ManyToOne
+    @JoinColumn(name="AUTHOR_ID")
+    private Author author;
+
+    public Book() {
+    }
 
     public Long getId() {
         return id;
@@ -31,5 +38,11 @@ public class Book implements Serializable {
         this.title = title;
     }
 
-    //    private Author author;
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
 }
