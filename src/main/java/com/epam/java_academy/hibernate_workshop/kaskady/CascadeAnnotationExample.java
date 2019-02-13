@@ -102,8 +102,9 @@ public class CascadeAnnotationExample {
         session.getTransaction().commit();
         System.out.println("Pierwsza transakcja zakończona!");
 
-        System.out.println("Spójrz teraz na baze danych, potem wpisz cokolwiek i naciśnij 'Enter'" +
-                " a program usunie z bazy pierwszego autora i jego książki");
+        System.out.println("Spójrz teraz na bazę danych, potem wpisz cokolwiek i naciśnij 'Enter'" +
+                " a program usunie z bazy pierwszego autora i tym samym jego książki" +
+                " z powodu kaskadowej propagacji wszystkich operacji.");
         Scanner input = new Scanner(System.in);
         input.nextLine();
 
