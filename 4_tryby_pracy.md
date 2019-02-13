@@ -25,7 +25,7 @@ Przechowywane w enum Action
 
 ### Jak definiować :
 np:
-`<entry key="hibernate.hbm2ddl.auto" value="create">`
+hibernate.hbm2ddl.auto=create
 
  
 
