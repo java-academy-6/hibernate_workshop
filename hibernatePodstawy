@@ -1,3 +1,5 @@
 5. Absolutne podstawy hibernate, łączenie z bazą, podstawowe tworzenie tabel przez hibera
 Hibernate to biblioteka do realizacji warstwy dostępu do danych (ang. persistance layer), służącą do mapowania obiektowo-relacyjnego (ORM) oraz implementującą JPA.
 Najprostrzym sposobem dodania Hibernate do Javowego projektu jest użycie mavena oraz dodanie odpowiedniej zależności, którą można znaleźć pod adresem http://hibernate.org/orm/releases/ wybierając odpowiednią wersję biblioteki.
+
+Zadanie, korzystając z załączonego projektu mavenowego, połącz się z lokalną bazą danych. Zwórć uwagę na plik konfiguracyjny hibernate.properties i ewentualnie go zmodyfiku.
