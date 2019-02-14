@@ -2,6 +2,7 @@ package com.epam;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class App {
@@ -12,16 +13,23 @@ public class App {
 
         Person person = new Person("Kamilek", 26);
         session.save(person);
-        Person person1 = new Person("Marcin", 39);
-        session.save(person1);
-        Person person2 = new Person("Młody", 13);
-        session.save(person2);
+//        person.setName("Buka");
 
         Person load = session.load(Person.class, 1);
 
+        System.out.println();
         System.out.println(load);
-
+        System.out.println();
         session.close();
+
+        person.setAge(112);
+
+//        Session nowaSesja = sessionFactory.openSession();
+//
+//        Person nowyKamilek = nowaSesja.load(Person.class, 1);
+//        System.out.println(nowyKamilek);
+//
+//        nowaSesja.close();
         sessionFactory.close();
     }
 }
