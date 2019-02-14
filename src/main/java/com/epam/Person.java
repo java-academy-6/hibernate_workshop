@@ -2,17 +2,29 @@ package com.epam;
 
 import javax.persistence.*;
 
+
 @Entity
-@Table(name = "person")
 public class Person {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue
+    private int id;
+    @Column(name = "FULL_NAME")
+    private String name;
+    private int age;
 
-    @Column(nullable = false)
-    private String firstName;
+    public Person() {};
 
-    @Column(nullable = false)
-    private String lastName;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
