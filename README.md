@@ -1,4 +1,7 @@
-WARSZTATY Z HIBERNATE
+### How to run project?
+- mvn clean install
+- java -jar target/snapshotName.jar
 
-
-Oskar - 11 Kolekcje
+### What is required?
+- Java 8+
+- Maven
