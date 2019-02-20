@@ -12,8 +12,8 @@
         <property name="dialect">org.hibernate.dialect.H2Dialect</property>
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
-        <mapping class="com.epam.Person"/>
-        <mapping class="com.epam.Employee"/>
-        <mapping class="com.epam.Employer"/>
+        <mapping class="com.epam.Osoba"/>
+        <mapping class="com.epam.Pracownik"/>
+        <mapping class="com.epam.Pracodawca"/>
     </session-factory>
 </hibernate-configuration>

@@ -12,16 +12,16 @@ public class App {
         SessionFactory sessionFactory = config.buildSessionFactory();
         Session session = sessionFactory.openSession();
 
-        Employee employee = new Employee("John", 26, 3000);
-        Employer employer = new Employer("Jack", 39, 1);
+        Pracownik pracownik = new Pracownik("John", 26, 3000);
+        Pracodawca pracodawca = new Pracodawca("Jack", 39, 1);
 
         session.beginTransaction();
-        session.persist(employee);
-        session.persist(employer);
+        session.persist(pracownik);
+        session.persist(pracodawca);
         session.getTransaction().commit();
 
-        List<Person> persons = session.createQuery("FROM Person").list();
-        persons.forEach((x) -> System.out.printf("- %s%n", x));
+        List<Osoba> osoby = session.createQuery("FROM Osoba").list();
+        osoby.forEach((x) -> System.out.printf("- %s%n", x));
 
         session.close();
         sessionFactory.close();

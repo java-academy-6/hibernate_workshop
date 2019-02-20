@@ -4,20 +4,20 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class Employee extends Person {
-    Employee(String name, int age, int salary) {
-        super(name, age);
-        this.salary = salary;
+public class Pracownik extends Osoba {
+    Pracownik(String imię, int wiek, int pensja) {
+        super(imię, wiek);
+        this.pensja = pensja;
     }
 
     @Column
-    int salary;
+    int pensja;
 
     @Override
     public String toString() {
         return super.toString() +
                 "{" +
-                "salary=" + salary +
+                "pensja=" + pensja +
                 '}';
     }
 }
