@@ -11,7 +11,7 @@ public class Krok2 {
         Session session = sessionFactory.openSession();
 
 
-        Person person = new Person("SQL", 125, Plec.Inna);
+        Person person = new Person("SQL", 125, Plec.Nieznana);
 
 
         session.beginTransaction();

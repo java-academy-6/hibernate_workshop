@@ -12,8 +12,10 @@ public class Person {
     private String name;
     private int age;
 
-    @Enumerated
-    @Column(columnDefinition = "smallint")
+    @Enumerated(EnumType.STRING)
+    @Column(length = 15)
+//    @Enumerated
+//    @Column(columnDefinition = "smallint")
     private Plec plec;
 
     public Person() {};

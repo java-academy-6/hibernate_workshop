@@ -14,7 +14,7 @@ public class App {
         Person person1 = new Person("Marcin", 29, Plec.Mezczyzna);
         Person person2 = new Person("Młody", 13, Plec.Mezczyzna);
         Person person3 = new Person("Mariola", 21, Plec.Kobieta);
-        Person person4 = new Person("Java", 25, Plec.Inna);
+        Person person4 = new Person("Java", 25, Plec.Nieznana);
 
 
         session.beginTransaction();
