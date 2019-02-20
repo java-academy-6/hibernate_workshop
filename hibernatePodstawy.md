@@ -1,7 +1,13 @@
 ## 5. Absolutne podstawy hibernate
+
 Łączenie z bazą, podstawowe tworzenie tabel przez hibera.
 
+#### Czym jest Hibernate
+
 Hibernate to biblioteka do realizacji warstwy dostępu do danych (ang. persistance layer), służącą do mapowania obiektowo-relacyjnego (ORM) oraz implementującą JPA.
+
+#### Konfiguracja
+
 Najprostrzym sposobem dodania Hibernate do Javowego projektu jest użycie mavena oraz dodanie odpowiedniej zależności, którą można znaleźć pod adresem http://hibernate.org/orm/releases/ wybierając odpowiednią wersję biblioteki.
 Następnie trzeba go skonfigurować, na co jest kilka sposobów, jednym z nich jest dodanie pliku hibernate.properties do katalogu resources (w przypadku projektu mavenowego). w nim należy wskazać sterownik bazy danych, z którą chcemy się połączyć, jej adres, login hasło użytkownika bazodanowego oraz odpowiedni dialekt SQL właściwy dla bazy. Szablon takiego pliku wygląda następująco:
 
@@ -18,6 +24,14 @@ SessionFactory sessionFactory = config.buildSessionFactory();
 Session session = sessionFactory.openSession();
 ```
 
-### Zadanie
+#### Tworzenie encji
+
+Aby utworzyć encję potrzebujemy oznaczyć klasę adnotacją @Entity oraz opcjonalnie @Table, w której parametrze możemy ręcznie nadać nazwę tablicy utworzonej przez Hibernate na podstawie tej klasy. Każde z pól klasy, które chcemy odwzorować jako kolumnę w bazie danych, należy oznaczyć adnotacją @Column, w parametrze której możemy podać nazwę tworzonej kolumny. Wyjątkami są klucze główne, które oznaczamy adnotacją @Id, oraz relacje.
+
+### Zadanie 1
 
 Korzystając z załączonego projektu mavenowego, połącz się z lokalną bazą danych. Zwróć uwagę na plik konfiguracyjny hibernate.properties i ewentualnie go zmodyfiku.
+
+### Zadanie 2
+
+Korzystając z załączonego projektu mavenowego i po wykonaniu poprzedniego zadania, utwórz kilka encji, a następnie zobacz jak są one odzwierciedlone w bazie danych.
