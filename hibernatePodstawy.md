@@ -11,7 +11,8 @@ Hibernate to biblioteka do realizacji warstwy dostępu do danych (ang. persistan
 Najprostrzym sposobem dodania Hibernate do Javowego projektu jest użycie mavena oraz dodanie odpowiedniej zależności, którą można znaleźć pod adresem http://hibernate.org/orm/releases/ wybierając odpowiednią wersję biblioteki.
 Następnie trzeba go skonfigurować, na co jest kilka sposobów, jednym z nich jest dodanie pliku hibernate.properties do katalogu resources (w przypadku projektu mavenowego). w nim należy wskazać sterownik bazy danych, z którą chcemy się połączyć, jej adres, login hasło użytkownika bazodanowego, odpowiedni dialekt SQL właściwy dla bazy oraz strategię określającą jak i czy Hibernate ma modyfikować bazę danych. Szablon takiego pliku wygląda następująco:
 
-```hibernate.connection.driver_class = 
+```
+hibernate.connection.driver_class = 
 hibernate.connection.url = 
 hibernate.connection.username = 
 hibernate.connection.password = 
@@ -20,7 +21,8 @@ hibernate.hbm2ddl.auto =
 ```
 Gdy konfigurację mamy już za sobą i chcemy połączyć się z bazą danych z poziomu programu, to znowu mamy kilka możliwości, z których najprostszą i działającą, jest stworzenie obiektu typu Configuration, następnie zbudowaniu dzięki niemu SessionFactory i w końcu utworzenie z niego Session. Kod wygląda tak:
 
-```Configuration config = new Configuration();
+```
+Configuration config = new Configuration();
 SessionFactory sessionFactory = config.buildSessionFactory();
 Session session = sessionFactory.openSession();
 ```
