@@ -4,15 +4,14 @@ Jesteś nowozatrudnioną osobą i jako pierwsze zadanie otrzymujesz ogarnięcie 
 
 Jesteś zagubiony, rozgoryczony, a co najgorsze - ambitny. Za wszelką cenę coś chcesz zrobić.
 
-Pierwsze co robisz to odpalasz Krok1 i krzyczysz "Bingo" jeśli przeszło. Jeśli nie - idziesz do najbliższego kolegi,
-który coś Ci podpowie. W Twoim zespole najwięcej wie niejaki Tomek, jednak słyszałeś plotki że najczęściej to się
-uśmiecha zamiast udzielić odpowiedzi.
+Pierwsze co robisz to odpalasz Krok1 i krzyczysz "Bingo" jeśli przeszło. Jeśli nie - idziesz do najbliższego kolegi, który coś Ci podpowie. W Twoim zespole najwięcej wie niejaki Tomek, jednak słyszałeś plotki że najczęściej to się uśmiecha zamiast udzielić odpowiedzi.
 
-Zad1. Jak Ci nie przeszło to sobie jakoś poradź.
+<b>Zad1. Jak Ci nie przeszło to sobie jakoś poradź.
 
-Zad2. Zobacz używając IDE tam po prawej Database H2 odpowiednio ustawiając ustawienia
+Zad2. Zobacz używając IDE tam po prawej Database H2 odpowiednio ustawiając ustawienia</b>
 
-Jeśli masz już zadanie 1 i 2 zrobione, to wracamy do punktu zero. Za 10 min stand-up, każdy powie co zrobił a Ty co?
+Jeśli masz już zadanie 1 i 2 zrobione, to wracamy do punktu zero. Za 10 min stand-up, każdy powie co zrobił a Ty co? 
+
 Nico, nic nie zrobiłeś, bujałeś się na gałęzi, nie wiesz co robi nawet. Ale jesteś ambitny, a jak mówi powiedzenie:
 jak się nie umie kodzić to się czyści kod i się opowiada o tym na stand-upie.
 
@@ -22,7 +21,7 @@ Myślisz sobie: no nie! Jak to nieznana, to niepolityczne, by tak się ogranicza
 "Nieznana" na "Inna" oraz poprawiasz kod odpowiednio w Krok1 i Krok2 by się zgadzało. Następnie ktoś mówi że trzeba
 puścić Krok2 bo trzeba puścić Krok2.
 
-Zad3. Zobacz w bazie co narobiłeś.
+<b>Zad3. Zobacz w bazie co narobiłeś.</b>
 
 Nagle ni stąd nie zowąd przybiega znudzony szef, ale zadowolony. Stukając w zegarek czuje że w końcu się na coś przyda.
  To czas na stand-up.
@@ -31,18 +30,22 @@ Mówisz co zjebałeś, jak mówisz że na H2 to wszyscy wzdychają z ulgą. W ra
 Enuma na inty. Szef klepie po plecach że świetna myśl, że zawsze na H2 to było najgorsze że to były stringi a nie inty.
 Ktoś tam nawet z grupy klasnął, chyba szykuje się awans.
 
-Zad4. Usuń wszystko co stworzyłeś na H2
+<b>Zad4. Usuń wszystko co stworzyłeś na H2
+
 Zad5. Zmień w ustawieniach Person tak by Enuma mapowało do intów
-Zad6. Puść krok1 i zobacz w H2 jak pięknie zmapowało do intów
+
+Zad6. Puść krok1 i zobacz w H2 jak pięknie zmapowało do intów</b>
 
 Zazdrosna o Twój świetny występ na stand-upie Mariola pisze do Ciebie, że zrobiła wspaniałą zmianę czyszczącą kod.
 Każe Ci zmienić apolityczne:
-    "Mezczyzna, Kobieta, Nieznana;"
+    "Mezczyzna, Kobieta, Inna;"
 Na:
-    "Kobieta, Nieznana, Mężczyzna;"
+    "Kobieta, Inna, Mężczyzna;"
 
-Zad7. Nie kłócąc się z Mariolą zmieniasz kod jak każe.
-Zad8. Puść kod8. W bazie H2 zobacz co najlepszego narobiłeś.
+
+<b>Zad7. Nie kłócąc się z Mariolą zmieniasz kod jak każe.
+
+Zad8. Puść krok2. W bazie H2 zobacz co najlepszego narobiłeś. </b>
 
 
 
