@@ -19,6 +19,7 @@ public class LadowanieGorliweLeniwe {
      * 1. Co się stanie, gdy w klasach ORM zmienimy FetchType na EAGER?
      * 2. Zmieńcie parametr drukujTezAdresy w metodzie drukujUmowyOsoby na false. Ile wtedy jest zapytań i przy jakich ustawieniach?
      * 3. Zakomentujcie całkiem drukowanie umów, zostawiając tylko listowanie osób. Co wtedy się dzieje?
+     * 4. Co zrobić, by liczba zapytań była mniejsza?
      */
     public static void main(String[] args) {
         Configuration configuration = new Configuration();
@@ -54,7 +55,7 @@ public class LadowanieGorliweLeniwe {
     }
 
     private static void drukujImieOsoby(Osoba x) {
-        System.out.println("Osoba: " + x.getImię());
+        System.out.println("Osoba: " + x.getImie());
     }
 
     private static void dajOdpoczac() {

@@ -24,8 +24,7 @@ public class Umowa {
     @Column
     private String nazwa;
 
-//    @Fetch(FetchMode.JOIN)
-//    @OneToMany(fetch=FetchType.LAZY)
+//    @OneToMany(fetch=FetchType.EAGER)
     @OneToMany
     @JoinColumn(name = "Adres")
     private Set<Adres> adresy;

@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -22,17 +20,16 @@ public class Osoba {
     @GeneratedValue
     int id;
     @Column(name = "IMIE")
-    String imię;
+    String imie;
 
-    @Fetch(FetchMode.JOIN)
-    @OneToMany(fetch=FetchType.EAGER)
-//    @OneToMany
+//    @OneToMany(fetch=FetchType.EAGER)
+    @OneToMany
     @JoinColumn(name = "Umowa")
     private Set<Umowa> umowas;
 
 
     public Osoba(String imie) {
-        this.imię = imie;
+        this.imie = imie;
     }
 
 
@@ -40,7 +37,7 @@ public class Osoba {
     public String toString() {
         return "Osoba{" +
             "id=" + id +
-            ", imię='" + imię + '\'' +
+            ", imię='" + imie + '\'' +
             ", umowas=" + umowas +
             '}';
     }
