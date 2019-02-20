@@ -48,3 +48,9 @@ przy którym sięgamy do wielu tabel
 + uniemożliwiamy sobie, lub co najmniej bardzo utrudniamy, wykorzystanie czystego kodu SQL w połączeniu z Hibernate'em
  - dla bardziej złożonych hierarchii klas ręczne napisanie prawidłowych outer- oraz inner-joinów (inner-join jest
   wykorzystywany gdy szukamy obiektów z podklasy) jest bardzo trudne
+
+
+
+## Zadanie
+Wykorzustując przykład dziecziczenia Pracownik extends Osoba i Pracodawca extends Osoba, zaimplementuj 3 strategie 
+dziedziczenia w Hibernate.
