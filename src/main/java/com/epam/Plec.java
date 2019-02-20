@@ -1,5 +1,6 @@
 package com.epam;
 
 public enum Plec {
-    Mezczyzna, Kobieta, Nieznana;
+    Inna, Kobieta, Mezczyzna;
 }
+
