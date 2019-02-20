@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.javawithease.business.Subject" table="Subject">
+        <id name="subjectId" type="int" column="Subject_Id">
+            <generator class="native"></generator>
+        </id>
+
+        <property name="subjectName" column="Subject_Name" type="string"></property>
+
+    </class>
+
+</hibernate-mapping>
