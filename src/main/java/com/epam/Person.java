@@ -12,11 +12,16 @@ public class Person {
     private String name;
     private int age;
 
+    @Enumerated(EnumType.STRING)
+    @Column(length = 15)
+    private Plec plec;
+
     public Person() {};
 
-    public Person(String name, int age) {
+    public Person(String name, int age, Plec plec) {
         this.name = name;
         this.age = age;
+        this.plec = plec;
     }
 
     @Override
@@ -25,6 +30,7 @@ public class Person {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", plec=" + plec +
                 '}';
     }
 }

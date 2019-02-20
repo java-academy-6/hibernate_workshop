@@ -10,9 +10,8 @@ public class SprawdzeniePołączenia {
         Class.forName ("org.h2.Driver");
         Connection conn = DriverManager.getConnection ("jdbc:h2:~/test", "sa","");
         Statement st = conn.createStatement();
-        st.executeUpdate("CREATE table nowa_tabela");
+        st.executeUpdate("CREATE table nowa_tabela2");
         conn.close();
-
     }
 }
 
