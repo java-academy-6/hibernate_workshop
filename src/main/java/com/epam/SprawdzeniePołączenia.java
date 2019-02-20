@@ -11,6 +11,7 @@ public class SprawdzeniePołączenia {
         Connection conn = DriverManager.getConnection ("jdbc:h2:~/test", "sa","");
         Statement st = conn.createStatement();
         st.executeUpdate("CREATE table nowa_tabela");
+        st.executeUpdate("INSERT into PERSON (id, AGE, FULL_NAME) values(1, 20, 'aaa')");
         conn.close();
 
     }

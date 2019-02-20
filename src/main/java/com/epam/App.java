@@ -17,9 +17,9 @@ public class App {
         Person person2 = new Person("Młody", 13);
         session.save(person2);
 
-        Person load = session.load(Person.class, 1);
-
-        System.out.println(load);
+        Person load1 = session.load(Person.class, 1);
+        Person load2 = session.load(Person.class, 2);
+        Person load3 = session.load(Person.class, 3);
 
         session.close();
         sessionFactory.close();
