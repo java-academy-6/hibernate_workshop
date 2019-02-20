@@ -32,7 +32,7 @@ public class HibernateTest {
         System.out.println(student1.getSubjects().getClass());
 
         System.out.println("Zadanie!");
-        System.out.println("Spróbuj przerobić program, tak aby uzyskać inny typ Kolekcji, np PersistentIdentifierBag");
+        System.out.println("Spróbuj przerobić program, tak aby uzyskać inny typ Kolekcji, np PersistentSet");
         System.out.println("\n\n\n------------------------------------------");
 
 
