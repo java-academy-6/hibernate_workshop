@@ -2,14 +2,14 @@ package com.epam;
 
 import javax.persistence.*;
 
-
 @Entity
-public class Person {
+public abstract class Person {
     @Id
     @GeneratedValue
     private int id;
-    @Column(name = "FULL_NAME")
+    @Column
     private String name;
+    @Column
     private int age;
 
     public Person() {};

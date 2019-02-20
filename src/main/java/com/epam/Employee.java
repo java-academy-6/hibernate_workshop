@@ -1,4 +1,4 @@
-package com.epam.table_per_concrete_class;
+package com.epam;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,4 +12,12 @@ public class Employee extends Person {
 
     @Column
     int salary;
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "{" +
+                "salary=" + salary +
+                '}';
+    }
 }
