@@ -29,7 +29,8 @@ Session session = sessionFactory.openSession();
 
 Aby utworzyć encję potrzebujemy oznaczyć klasę adnotacją @Entity, w której parametrze możemy ręcznie nadać nazwę tablicy utworzonej przez Hibernate na podstawie tej klasy. Dodatkowo każde z pól klasy, które chcemy odwzorować jako kolumnę w bazie danych, możemy oznaczyć adnotacją @Column, w parametrze której możemy podać nazwę tworzonej kolumny. Każda encja musi posiadać klucz główny, który oznaczamy adnotacją @Id. Na koniec, jeśli korzystamy z konfiguracji przedstawionej wyżej, należy dodać utworzoną encję do konfiguracji.
 
-```config.addAnnotatedClass(EncjaOsoba.class);
+```
+config.addAnnotatedClass(EncjaOsoba.class);
 ```
 
 #### Mapowanie
