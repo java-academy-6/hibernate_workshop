@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class App {
+public class Krok1 {
     public static void main(String[] args) {
         Configuration config = new Configuration().configure("hibernate.cfg.xml");
         SessionFactory sessionFactory = config.buildSessionFactory();
