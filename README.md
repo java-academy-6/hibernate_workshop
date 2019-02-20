@@ -16,7 +16,7 @@ Sekwencja to obiekt bazy danych, który generuje przyrostowe liczby całkowite d
 
 Jak stworzyć przykładową sekwencję:
 
-@Entity(name = "sequenceIdentifier) {
+```@Entity(name = "sequenceIdentifier) {
 public class SequenceIdentifier {
 	@Id
 	@GenericGenerator(
