@@ -12,9 +12,9 @@ W Hibernate można ustawiać poprzez adnotację @Fetch na polu klasy będącym i
 1. Podczas uruchomienia programu ładuje instancję obiektu oraz wszystkie zależne instancje.
 2. Zapytanie do bazy budowane przez JOIN
 3. Wyciąga wszystkie potrzebne dane z bazy i ładuje od razu do pamięci aplikacji wszystkie zależności.
-4. Zalety:
+##### Zalety:
 + po załadowaniu wszystkiego, aplikacja działa szybko, mniejsze ryzyko spowolnień
-5. Wady:
+##### Wady:
 + zwiększa czas ładowania danych, powodując problemy z dostępnością aplikacji
 + mocno obciąża bazę danych
 
@@ -23,20 +23,20 @@ W Hibernate można ustawiać poprzez adnotację @Fetch na polu klasy będącym i
 1. Obiekt jest ładowany, ale wszystkie zależności są ściągane z bazy danych dopiero gdy są potrzebne (np. wywołując getCośtam()).
 2. Domyślne ustawienie Hibernate
 3. Wtedy gdy jest potrzebne, zapytanie do bazy budowane jest przez SELECT
-4. Zalety: 
+##### Zalety: 
 + szybsza inicjalizacja
 + mniejsze obciążenie bazy danych
 + mniejsze zużycie pamięci
-5. Wady:
+##### Wady:
 + Może spowodować spowolnienia w trakcie działania aplikacji
 + W niektórych przypadkach trzeba ostrożnie obchodzić się z leniwie ładowanymi obiektami, 
 by uniknąć wyjątków.
 
 ##Błędy:
-###org.hibernate.LazyInitializationException
+#####org.hibernate.LazyInitializationException
 Powstaje, gdy próbujemy załadować leniwie obiekty już po zamknięciu EntityManagera 
 (? - nie wiem), więc aplikacja nie ma połączenia z bazą i nie może dociągnąć danych.
-###n+1 Select Problem
+#####n+1 Select Problem
 + Problem wydajnościowy występujący przy listach zagnieżdżonych i leniwym ładowaniu.
 + Mamy tabelę z użytkownikami. Każdy użytkownik ma kilka zawrtych przez siebie umów (jeden-do-wielu).
 Chcemy wyświetlić (wylistować) wszystkie osoby wraz z umowami, jakie posiadają.
