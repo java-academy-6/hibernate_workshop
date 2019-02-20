@@ -1,12 +1,12 @@
 WARSZTATY Z HIBERNATE
 
-#Strategie dziedziczenia
+# Strategie dziedziczenia
 3 strategie dziedziczenia
 - 'Table per concrete class'
 - 'Table per class hierarchy'
 - 'Table per subclass'
 
-##Table per concrete class:
+## Table per concrete class:
 czyli każdej nieabstrakcyjnej klasie odpowiada tabela w bazie danych. Jest to podejście najprostsze, ale jednocześnie
 najmniej eleganckie. Na poziomie bazodanowym zapominamy tu bowiem o jakimkolwiek związku między klasami dziedziczącymi.
 
@@ -21,7 +21,7 @@ To podejście nie jest polecane z kilku względów:
 + implementacja więzów integralności (integrity constraints) danych nadklasy staje się niezwykle uciążliwa
 
 
-##Table per class hierarchy:
+## Table per class hierarchy:
 czyli utworzenie jednej tabeli dla wszystkich podklas. Taka tabela zawiera kolumny odpowiadające wszystkim trwałym
 (persistent) atrybutom wszystkich podklas. Dodatkowo, potrzebna jest jedna kolumna nazywana discriminator, która
 określa, do jakiej podklasy należy obiekt odpowiadający danemu rekordowi w tabeli. Kolumna ta jest potrzebna
@@ -31,7 +31,7 @@ To podejście, choć może wyglądać nieelegancko, jest zazwyczaj najlepsze i p
 + wszystkie atrybuty muszą być zadeklarowane Hibernate'owi jako nullable.
 
 
-##Table per subclass:
+## Table per subclass:
 czyli wierne odwzorowanie modelu do tabel. Tworzymy tabelę dla nadklasy, oraz po jednej tabeli dla każdej podklasy,
 przy czym tabela reprezentująca podklasę nie powiela żadnego pola, które wystąpiło w nadklasie. Jak zatem znaleźć
 rekord z tabeli nadklasy odpowiadający temu z podklasy? Otóż klucz w każdej tabeli podklasy jest jednocześnie kluczem
