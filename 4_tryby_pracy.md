@@ -15,7 +15,7 @@ Przechowywane w enum Action
 
 - create - najpierw zostanie wykonany drop bazy, a pozniej jej stworzenie
 
-- create-drop - usuwa schemat i tworzy go znowu gdy startuje SessionFactory, dodatkowo usuwa schemat gdy SessionFactory się kończy
+- create-drop - usuwa schemat i tworzy go znowu gdy startuje SessionFactory, dodatkowo usuwa schemat gdy SessionFactory się kończy, stosowane przy testowaniu
 
 - validate - waliduje schemat bazy
 
