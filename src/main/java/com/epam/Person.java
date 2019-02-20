@@ -1,7 +1,10 @@
 package com.epam;
 
-import javax.persistence.*;
+import jdk.jfr.Timestamp;
+import org.hibernate.annotations.CreationTimestamp;
 
+import javax.persistence.*;
+import java.time.*;
 
 @Entity
 public class Person {
@@ -18,12 +21,22 @@ public class Person {
 //    @Column(columnDefinition = "smallint")
     private Plec plec;
 
+    @CreationTimestamp
+    private LocalDateTime localDateTime;
+
+    @CreationTimestamp
+    private LocalDate localDate;
+
+    @CreationTimestamp
+    private LocalTime localTime;
+
     public Person() {};
 
     public Person(String name, int age, Plec plec) {
         this.name = name;
         this.age = age;
         this.plec = plec;
+
     }
 
     @Override
