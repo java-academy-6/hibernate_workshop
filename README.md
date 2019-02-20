@@ -53,4 +53,4 @@ przy którym sięgamy do wielu tabel
 
 ## Zadanie
 Wykorzustując przykład dziecziczenia Pracownik extends Osoba i Pracodawca extends Osoba, zaimplementuj 3 strategie 
-dziedziczenia w Hibernate.
+dziedziczenia w Hibernate. Zobacz odziweciedlenie każdego rozwiązania w bazie danych.
