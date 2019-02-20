@@ -1,33 +1,29 @@
-Id - bardzo ważna rzecz w tabelach baz danych. Służy jako identyfikator rzędu.
+Id - istotna sprawa w tabelach baz danych. Służy jako identyfikator rzędu. Taki oto identyfikator ma różne strategie, którym się trzeba bliżej przyjżeć, a mianowicie:
+- IDENTITY
+- SEQUENCE
+- TABLE (SEQUENCE)
 
-W Hibernate:
+
+Jak to wygląda w Hiberze:
 
 @Id - adnotacja naznaczająca kolumnę jako PRIMARY KEY w tabeli.
-@GeneratedValue - adnotacja służąca do generowanie wartości id. Domyślnie jest to strategia, która automatycznie zwiększa wartość. czyli @GeneratedValue(strategy = GenerationType.AUTO) 
+@GeneratedValue - adnotacja służąca do generowanie wartości id. Domyślnie jest to strategia, która automatycznie zwiększa wartość. czyli @GeneratedValue(strategy = GenerationType.IDENTITY) 
 
-Enum GenerationType posiada 4 wartości: AUTO, TABLE, SEQUENCE, IDENTITY.
 
-Sekwencja to obiekt bazy danych, który generuje przyrostowe liczby całkowite dla każdego kolejnego żądania. Zalety sekwencji:
+1. Generator IDENTITY - umożliwia automatyczną inkrementację kolumny typu integer na żądanie.
+
+```@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;```
+
+2. Generator SEQUENCE - sekwencja to obiekt bazy danych, który generuje przyrostowe liczby całkowite dla każdego kolejnego żądania. Sekwencje są znacznie bardziej elastyczne niż kolumny IDENTITY, ponieważ:
 
 - sekwencja jest wolna od tabel, tę samą sekwencję mozna przypisać do wielu kolumn lub tabel
 
 - sekwencja może wstępnie przydzielać wartości, aby poprawić wydajność
 
 
-Jak stworzyć przykładową sekwencję:
-
-```@Entity(name = "sequenceIdentifier) {
-public class SequenceIdentifier {
-	@Id
-	@GenericGenerator(
-		name = "sequence"
-		strategy = "sequence"
-		parameters = {
-			@org.hibernate.annotations.Parameter(
-				name = "sequence:,
-				value = "sequence"
-			)
-	})
-	@GeneratedValue(generator = "sequence")
-	private Long id;
-}
+Więcej info dla zainteresowanych tematem: 
+https://vladmihalcea.com/hibernate-identity-sequence-and-table-sequence-generator/
+https://www.youtube.com/watch?v=a0ScR_JAKfI
+Uwaga hindu, trener Javy, Pan Kishan: https://www.youtube.com/watch?v=yq0MGphGiMY
