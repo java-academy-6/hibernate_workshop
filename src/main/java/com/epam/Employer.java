@@ -5,19 +5,19 @@ import javax.persistence.Entity;
 
 @Entity
 public class Employer extends Person {
-    public Employer(String name, int age, int numberOfEmploees) {
+    Employer(String name, int age, int numberOfEmploees) {
         super(name, age);
-        this.numberOfEmploees = numberOfEmploees;
+        this.numberOfEmployees = numberOfEmploees;
     }
 
     @Column
-    int numberOfEmploees;
+    int numberOfEmployees;
 
     @Override
     public String toString() {
         return super.toString() +
                 "{" +
-                "numberOfEmploees=" + numberOfEmploees +
+                "numberOfEmploees=" + numberOfEmployees +
                 '}';
     }
 }

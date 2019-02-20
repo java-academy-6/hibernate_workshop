@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 @Entity
 public class Employee extends Person {
-    public Employee(String name, int age, int salary) {
+    Employee(String name, int age, int salary) {
         super(name, age);
         this.salary = salary;
     }
