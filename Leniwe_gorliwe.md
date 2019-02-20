@@ -4,14 +4,17 @@ Są dwa podejścia do ładowania danych:
 
 Różnica polega na podejściu do ładowania z bazy danych zależności między encjami.
 
-W Hibernate można ustawiać poprzez adnotację @Fetch na polu klasy będącym inną encją.
-
+W Hibernate można ustawiać sposób ładowania w dwóch miejscach:
+ + KIEDY pobierać dane: poprzez parametr w adnotacji @ManyToOne/@OneToOne/@OneToMany : fetch = FetchType.LAZY/EAGER
+ + JAK pobierać dane: poprzez adnotację @Fetch na polu klasy będącym inną encją: zapytania mogą być budowane przez FetchMode.JOIN 
+ (jedno zapytanie) lub FetchMode.SELECT (wiele pojedynczych zapytań)
+ 
 
 ##Gorliwe:
-1. adnotacja: @Fetch(FetchMode.JOIN) 
-1. Podczas uruchomienia programu ładuje instancję obiektu oraz wszystkie zależne instancje.
-2. Zapytanie do bazy budowane przez JOIN
-3. Wyciąga wszystkie potrzebne dane z bazy i ładuje od razu do pamięci aplikacji wszystkie zależności.
+1. adnotacja: fetch = FetchType.EAGER
+2. Podczas uruchomienia programu ładuje instancję obiektu oraz wszystkie zależne instancje.
+3. Zapytanie do bazy budowane przez JOIN
+4. Wyciąga wszystkie potrzebne dane z bazy i ładuje od razu do pamięci aplikacji wszystkie zależności.
 ##### Zalety:
 + po załadowaniu wszystkiego, aplikacja działa szybko, mniejsze ryzyko spowolnień
 ##### Wady:
@@ -19,10 +22,10 @@ W Hibernate można ustawiać poprzez adnotację @Fetch na polu klasy będącym i
 + mocno obciąża bazę danych
 
 ##Leniwe: 
-1. Adnotacja: @Fetch(FetchMode.SELECT)
-1. Obiekt jest ładowany, ale wszystkie zależności są ściągane z bazy danych dopiero gdy są potrzebne (np. wywołując getCośtam()).
-2. Domyślne ustawienie Hibernate
-3. Wtedy gdy jest potrzebne, zapytanie do bazy budowane jest przez SELECT
+1. Adnotacja: fetch = FetchType.LAZY
+2. Obiekt jest ładowany, ale wszystkie zależności są ściągane z bazy danych dopiero gdy są potrzebne (np. wywołując getCośtam()).
+3. Domyślne ustawienie Hibernate
+4. Wtedy gdy jest potrzebne, zapytanie do bazy budowane jest przez SELECT
 ##### Zalety: 
 + szybsza inicjalizacja
 + mniejsze obciążenie bazy danych
