@@ -30,7 +30,7 @@ Aby utworzyć encję potrzebujemy oznaczyć klasę adnotacją @Entity oraz opcjo
 
 ### Zadanie 1
 
-Korzystając z załączonego projektu mavenowego, połącz się z lokalną bazą danych. Zwróć uwagę na plik konfiguracyjny hibernate.properties i ewentualnie go zmodyfiku.
+Korzystając z załączonego projektu mavenowego, połącz się z lokalną bazą danych. Zwróć uwagę na plik konfiguracyjny hibernate.properties i ewentualnie go zmodyfikuj.
 
 ### Zadanie 2
 
