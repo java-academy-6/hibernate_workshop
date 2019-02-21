@@ -1,8 +1,6 @@
 
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-Q
-!src/main/java/pl/kk/Employee.java,e/a/ea792d198d4c826c4a58e19a9e7ae8c979dc18ad
 L
 src/main/java/pl/kk/App.java,d/9/d9612d5c63d70ed405eb87df3bcf1b747672a4a6
 v
