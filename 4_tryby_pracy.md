@@ -22,10 +22,20 @@ Przechowywane w enum Action
 - update - uaktualnia bazę
 
 
-
 ### Jak definiować :
-np:
+W pliku hibernate.properties:
 hibernate.hbm2ddl.auto=create
+
+W pliku hibernate.cfg.xml
+ <property name="hbm2ddl.auto">create</property>
+ 
+ UWAGA ! 
+ W konfiguracji xml IntelliJ podkreśla na czerwono niektóre opcje konfiguracji np: create-drop, nie należy się tym przejmować.
+ 
+ 
+ ### ZADANIE
+ Zmień gałązkę na hibernate_połączenie_Filip i w pliku hibernate.properties pozmieniaj opcję hibernate.hbm2ddl.auto na te podane wyżej, sprawdź jakie komunikaty się pojawiają. 
+
 
  
 
