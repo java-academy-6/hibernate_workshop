@@ -16,7 +16,7 @@ Jak to wygląda w Hiberze:
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long id;```
 
-2. Generator SEQUENCE - sekwencja to obiekt bazy danych, który generuje przyrostowe liczby całkowite dla każdego kolejnego żądania. Sekwencje są znacznie bardziej elastyczne niż kolumny IDENTITY, ponieważ:
+2. Generator SEQUENCE - sekwencja to obiekt w bazie danych obok tabel, który generuje przyrostowe liczby całkowite dla każdego kolejnego żądania. Sekwencje są bardziej elastyczne i nieco bardziej złożone niż kolumny IDENTITY, ponieważ:
 
 - sekwencja jest wolna od tabel, tę samą sekwencję mozna przypisać do wielu kolumn lub tabel
 
