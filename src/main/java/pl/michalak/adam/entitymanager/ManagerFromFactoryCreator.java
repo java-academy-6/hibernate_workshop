@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 class ManagerFromFactoryCreator implements EntityManagerCreator {
 
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("moja_pierwsza_perzystancja");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("perzystancja");
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();

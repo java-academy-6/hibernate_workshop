@@ -6,8 +6,11 @@ EntityManager wywołuje pod spodem hibernatową sesję (Session) i w przeciwień
 `Session session = entityManager.unwrap(Session.class);`
 
 Aby skorzystać w Hibernate z perzystancji, w folderze resources/META-INF zamiast pliku hibernate.    properties należy umieścić plik persistence.xml. Jego treść jest zależna od bazy danych, której      użyjesz. [Tutaj znajdziesz pliki persistence.xml dla większości używanych baz danych](https://       www.javatips.net/blog/hibernate-jpa-with-h2-database)
+Dodatkowo do pliku persistence.xml należy dodać dostawcę perzystancji pod znacznikiem <persistence-unit name = >
+`<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>`
+Aby Hibernate mógł być dostawcą perzystancji do projektu należy dodać do poma zależność [hibernate-agroal](https://mvnrepository.com/artifact/org.hibernate/hibernate-agroal)
 
-Aby użyć rządcy encji nie potrzebna jest żadna dodatkowa zależność, ponieważ znajduje się on w zależności hibernate-core. Rządcę encji można zainicjalizować na dwa sposoby:
+Rządca encji znajduje się w zależności hibernate-core. Rządcę encji można zainicjalizować na dwa sposoby:
 1. Poprzez kontener - tutaj to kontener stworzy rządcę encji korzystając z fabryki zakulisowo:
 `@PersistenceContext
 EntityManager entityManager;`
